@@ -1,0 +1,336 @@
+<!doctype html>
+
+<html ng-app="myApp">
+<head>
+
+  <!-- Website Title & Description for Search Engine purposes -->
+  <title>Story</title>
+  <meta name="description" content="Best food delivery Website">
+  <meta charset="utf-8">
+  <!-- Mobile viewport optimized -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="includes/css/bootstrap-glyphicons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="includes/css/styles.css">
+
+  <!-- Include Modernizr in the head, before any other Javascript -->
+  <script src="includes/js/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="container" id="main">
+
+    <!-- Nvbar begins here -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand"><img src="images/logo1.jpg" alt=""></a>
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#myCarousel">Home</a></li>
+            <li><a href="#Read">Read</a></li>
+            <li><a href="#Write">Write</a></li>
+            <li><a href="#Discover">Discover</a></li>
+            <li><a href="#Share">Share</a></li>
+
+
+          </ul>
+          <form action="" class="navbar-form pull-left">
+            <input type="text" class="form-control" placeholder="Search the Website.." id="searchInput">
+            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          </form>
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account <strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-refresh"></span>Update Profile</a></li>
+                <li class="divider"></li>
+                <li><a href=""><span class="glyphicon glyphicon-off"></span>Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar ends here -->
+    <!-- carousel  begins here -->
+    <div class="carousel slide " data-ride="carousel" id="myCarousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <div class="carousel-caption">
+            <h1>Read</h1>
+            <p>stories you’ll always remember.</p>
+            <div class="btn-group">
+              <button class="btn btn-primary "  onClick="location.href='#Read'">Read</button>
+              <button class="btn btn-primary " onClick="location.href='#Read'"><span class="glyphicon glyphicon-eye-open"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="slide2">
+          <div class="carousel-caption">
+            <h1>Write</h1>
+            <p>stories you’ll always remember.</p>
+            <div class="btn-group">
+              <button class="btn btn-success " onClick="location.href='#Write'">Write</button>
+              <button class="btn btn-success " onClick="location.href='#Write'"><span class="glyphicon glyphicon-pencil"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="item" id="slide3">
+          <div class="carousel-caption">
+            <h1>Share</h1>
+            <p>stories you’ll always remember.</p>
+            <div class="btn-group">
+              <button class="btn btn-danger " onClick="location.href='#Share'">Share</button>
+              <button class="btn btn-danger " onClick="location.href='#Share'"><span class="glyphicon glyphicon-share"></span></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
+      <a href="#myCarousel" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
+    </div>
+    <!-- Carousel ends here -->
+
+    <div class="row" id="stories">
+      <div class="col-lg-4">
+        <h3>Diamond thief</h3>
+        <p>What a keen sensation it gave me! Riding on a night-bullet-train, head out the window, sharp daggers of air against my face. Yes, I stole the diamonds. And it felt good.The only problem was that I knew you'd soon catch up with me.</p>
+        <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal1">Read Full Story</button>
+
+        <div id="myModal1" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Story</h4>
+              </div>
+              <div class="modal-body">
+                <p>What a keen sensation it gave me! Riding on a night-bullet-train, head out the window, sharp daggers of air against my face. Yes, I stole the diamonds. And it felt good.
+                  The only problem was that I knew you'd soon catch up with me. Then I’d be reduced. Made into a regurgitated bean. A regurgitated bean is like stew that’s been sitting for three days and all the water’s boiled from it and only a composite crud – a hideous conjunction of carrots and broiled pork – lies pellet-like at the bottom. I don’t want to eat those beans any more. Or to be reduced, made into a bean. Which is worse? But I won't tell you where the diamonds are.
+                  The worst thing that ever happened was the great electrical collapse, fifty years ago. When the only source of protein became those regurgitated beans. I used to work with a GM cow that made them. God, I hated that cow. Maybe stealing the diamonds was my way of rebelling against the monster.
+                  When the electron-feeders finished with our power, I reached a dead end with my life. Before the collapse I'd worked as a technical consultant on power stations. What vocation was there for me after the power disappeared? None. So yes, I worked at the new GM production suite for a while, all powered by steam, like in the old days. Steam powered by charcoal. The dead embers of our once mighty civilisation. We pillaged the skeletons of our dead to feed our new society. Nasty, wasn't it, how the electron-feeders, once they ran out of electricity, started feasting like ghouls on our bodies, robbing our precious electrons, of cats and dogs and animals, leaving condensed bare carbon-forms in their stead. Diamonds became worthless. You know all that, I'm just an old man talking nonsense. You don’t know how the shiny metallic purple diamonds stopped it all. No-one knows that. There was some kind of reaction, a bad reflection that set up a chain of destruction amongst the electron-feeders. Subatomic prions, some say: a pseudo-image that changed the shape of the electron-feeders and killed them. I don't know.
+                  Why did I steal the diamonds? Maybe to teach us a lesson. I had the opportunity, once you sent me to the plant where the diamonds were being kept. Maybe I was fed up being told how things would be when we finally rebuilt this place. We screwed up the last world and I'm certain we'll screw up the next one. What will happen when the electron-feeders come back and no-one knows where the diamonds have gone? No, I won't tell you where they are. Go ahead, feed me to the GM cow. Did you know that GM cows can digest anything from carbon to adamantium? Yes, it's true. By the way, the diamonds are in my guts.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-4">
+          <h3>Trust</h3>
+          <p>It was when he was a boy, padding alone through the wind-whipped strawgrass by the shore, that he saw the heron snared in wire.
+            The heron would beat its wings, rest, beat its wings; but make no progress to freeing its legs and body.</p>
+            <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal2">Read Full Story</button>
+
+            <div id="myModal2" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Story</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>It was when he was a boy, padding alone through the wind-whipped strawgrass by the shore, that he saw the heron snared in wire.
+                      The heron would beat its wings, rest, beat its wings; but make no progress to freeing its legs and body.
+                      His sneakers sucked mud as he entered the shallow break water. The heron grew frantic, blurred wings and slashing beak; then, as the boy’s shadow draped the bird, it stopped moving. Resigned, perhaps, or hoping it was unseen.
+                      The boy gave the bird’s back a pat. Glossy slick feathers; the heron flinched at his touch. The boy flinched back, afraid of the razor beak, the trapped claws. He could see how the wire was wound around the bird, could figure out the puzzle if the bird stayed still.
+                      A few more pats, and the boy settled. He stroked the bird’s neck and back. He crouched in the mud to unsnare the heron and soon experienced something that would stay with him for the many decades of his life.
+                      Deep-fried heron doesn’t taste as good as one hopes it might.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-4">
+              <h3>The Critic</h3>
+              <p>Herbert North, the most feared and reviled critic in the world, stopped by a newsstand to leaf through the new issue of Criticism Today magazine, in which he was featured. His well-cared-for face glowed from the cover, critical acumen glistening behind his glasses.</p>
+              <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal3">Read Full Story</button>
+
+              <div id="myModal3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" type="button" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Story</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Herbert North, the most feared and reviled critic in the world, stopped by a newsstand to leaf through the new issue of Criticism Today magazine, in which he was featured. His well-cared-for face glowed from the cover, critical acumen glistening behind his glasses. Late for a conference where he planned to delivery a devastating critique, he leafed quickly. There, before the newsstand, the world-renowned, feared and reviled critic collapsed, weeping. Passers by looked away in embarrassment as they stepped over his prostrate and sobbing figure. Phrases like “Human fire hydrant spewing watery pabulum,” and “In short, a bloviating hack,” bounced around the tinny echo chamber of his mind until a voice broke in.
+                        “You cry on it, buddy, you buy it.”</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+            <div class="well well-small visible-sm">
+              <button class="btn btn-large btn-block btn-default">Give us a call <span class="glyphicon glyphicon-phone"></span></button>
+            </div>
+            <div class="container">
+              <div class="row  " id="Read">
+                <div class="col-lg-4">
+                  <span class="glyphicon glyphicon-eye-open" style="font-size:200px;color:#1abc9c;"></span>
+                </div>
+                <div class="col-lg-8">
+                  <h1>Read</h1>
+                  <h3>Fill your bookshelf with endless possibilities.</h3>
+                  <h5>________</h5>
+                  <p>Where Reading Is Fun!</p>
+                  <p>Story has any type of book for any type of reader. Follow along as memorable stories emerge. Comment on books you enjoy to interact with their creators.</p>
+                  <button type="button" class="btn btn-success">Read More &rarr; </button>
+                </div>
+              </div>
+              <div class="row" id="row1">
+                <div class="col-lg-4">
+                  <img src="images/read1.png" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/read2.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/read3.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+              </div>
+
+              <div class="row  " id="Write">
+                <div class="col-lg-8">
+                  <h1>Write</h1>
+                  <h3>Your words. Our art. Amazing stories.</h3>
+                  <h5>________</h5>
+                  <p>How to Write a Short Story. For many writers, the short story is the perfect medium. Simple tools help you build books in minutes. Let the art inspire and surprise you as you write. Readers will encourage you along the way.</p>
+                  <p>Write short stories and publish them with us to earn money if your story is picked by our editors. Let the art inspire and surprise you as you write. Readers will encourage you along the way</p>
+                  <button type="button" class="btn btn-success">Read More &rarr; </button>
+                </div>
+                <div class="col-lg-4">
+                  <span class="glyphicon glyphicon-pencil" style="font-size:200px;color:#27c1dd;"></span>
+                </div>
+              </div>
+              <div class="row" id="row2">
+                <div class="col-lg-4">
+                  <img src="images/write1.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/write2.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/write3.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+              </div>
+
+              <div class="row  " id="Discover">
+                <div class="col-lg-4">
+                  <span class="glyphicon glyphicon-globe" style="font-size:200px;color:#1abc9c;"></span>
+                </div>
+                <div class="col-lg-8">
+                  <h1>Discover</h1>
+                  <h3>A safe, positive community for creativity.</h3>
+                  <h5>________</h5>
+                  <p>Find favorite new books and authors. Find new friends from across the globe, and discover their stories too. See Storybird used in creative new ways every day. Discover Stories You Love Through Friends & Interests. You can directly contact the writers and have discussions about their stories. Its all so easy with 'Story'. </p>
+                  <button type="button" class="btn btn-success">Read More &rarr; </button>
+                </div>
+              </div>
+              <div class="row" id="row3">
+                <div class="col-lg-4">
+                  <img src="images/discover1.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/discover2.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/discover3.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+              </div>
+
+              <div class="row  " id="Share">
+                <div class="col-lg-8">
+                  <h1>Share</h1>
+                  <h3>The world needs more stories — your stories.</h3>
+                  <h5>________</h5>
+                  <p>Writers need feedback, and many beginning writers opt to post their stories on websites where others can rate them and comment on them. Of course, writers should be careful when posting stories online. Many publishers consider anything posted online to be published and may not accept those works.</p>
+                  <button type="button" class="btn btn-success">Read More &rarr; </button>
+                </div>
+                <div class="col-lg-4">
+                  <span class="glyphicon glyphicon-share" style="font-size:200px;color:#27c1dd;"></span>
+                </div>
+              </div>
+              <div class="row" id="row4">
+                <div class="col-lg-4">
+                  <img src="images/share1.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/share2.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/share3.jpg" alt=""  class="img-responsive img-circle">
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row text-center" id="signup">
+                <p>Don't have an account..! <button type="button" class="btn btn-large btn-primary">Sign up today!</button></p
+                </div>
+                <footer>
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <h6>Copyrights &copy 2016 all Rights Reserved by chanda.roy@wipro.com</h6>
+                      <small><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></small>
+                    </div>
+                    <div class="col-sm-9">
+                      <ul class="nav navbar-nav">
+                        <li><a href="#"><img src="images/fb.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/google.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/insta.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/skype.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/phone.png" alt=""></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <!-- All Javascript at the bottom of the page for faster page loading -->
+            <!-- First try for the online version of jQuery-->
+            <script src="http://code.jquery.com/jquery.js"></script>
+
+            <!-- If no online access, fallback to our hardcoded version of jQuery -->
+            <script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+            <!-- Bootstrap JS -->
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+
+            <!-- Custom JS -->
+            <script src="includes/js/script.js"></script>
+
+
+
+          </body>
+          </html>

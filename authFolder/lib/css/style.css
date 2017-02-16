@@ -1,0 +1,105 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+background-image: url("../../images/blue.jpg");
+}
+
+a {
+  color: #00B7FF;
+
+}
+.col-sm-4{
+text-align: center;
+}
+/*login-form*/
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+
+
+
+
+
+a img{
+height:128px;
+width:128px;
+transition: all .2s ease-in-out;
+}
+a img:hover{
+  transform: scale(1.1);
+}
+.device{
+height:131px;
+width:145px;
+}
+
+
+// Small devices (landscape phones, 544px and up)
+@media (min-width: 544px) {
+  body{
+  padding-top:200px!important;
+  }
+  a img{
+  height:80px;
+  width:80;
+  transition: all .2s ease-in-out;
+  }
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  a img{
+  height:100px;
+  width:100px;
+  transition: all .2s ease-in-out;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+ }

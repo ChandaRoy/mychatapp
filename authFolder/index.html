@@ -1,0 +1,191 @@
+<html>
+<head >
+  <title>Smart Medication</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.5/ui-bootstrap-tpls.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>
+  <link rel="stylesheet" href="lib/css/style.css">
+</head>
+
+
+<body ng-app="myMed" ng-controller="authController">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4" >
+      </div>
+      <div class="col-lg-4 col-sm-4" >
+        <a data-toggle="modal"  data-target="#myModal" data-ng-click="person($event)">
+          <img class="img-responsive center-block" id="Patient" src="images/patient.png">
+          <div class="caption" style="font-weight: bolder;">Patient</div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-sm-4" >
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="row">
+      <div class="col-lg-4 col-sm-4" >
+        <a data-toggle="modal"  data-target="#myModal" data-ng-click="person($event)"><img class="img-responsive center-block" id="Doctor" src="images/doctor.png">
+          <div class="caption" style="font-weight: bolder;">Doctor</div></a>
+        </div>
+        <div class="col-lg-4 col-sm-4" >
+          <img class="img-responsive center-block device" src="images/device.jpg">
+        </div>
+        <div class="col-lg-4 col-sm-4" >
+          <a data-toggle="modal"  data-target="#myModal" data-ng-click="person($event)"><img class="img-responsive center-block" id="Pharmacist" src="images/pharmacy.png">
+            <div class="caption" style="font-weight: bolder;">Pharmacy</div></a>
+          </div>
+        </div>
+        <br><br><br><br>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4" >
+          </div>
+          <div class="col-lg-4 col-sm-4" >
+            <a data-toggle="modal" data-target="#myModal2" ng-click="person($event)"><button class="btn btn-danger btn-large">Register</button></a>
+          </div>
+          <div class="col-lg-4 col-sm-4" >
+          </div>
+        </div>
+      </div>
+
+
+      <!--Login Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!--Login Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" ng-click="reset()">&times;</button>
+              <h4 class="modal-title" style="text-align:center">{{value}}</h4>
+            </div>
+            <div class="modal-body">
+              <div id="errorDiv" class="alert alert-danger" role="alert" style="margin-top:10px;padding: 7px; display:none;">
+                <button type="button" class="close" ng-click="logInErrorMsg=''" aria-label="Close" style="margin-top: -3px;right:0;"><span aria-hidden="true">&times;</span></button>
+                {{logInErrorMsg}}
+              </div>
+              <div class="form-bottom">
+                <form class="form-signin" ng-submit="passportLogin()">
+                  <h2 class="form-signin-heading">Please login</h2>
+                  <input type="text" class="form-control form-username" name="form-username" ng-model="user.email" placeholder="Email Address" required="" autofocus="" />
+                  <input type="password" class="form-control form-username" name="form-password" ng-model="user.password" placeholder="Password" required=""/>
+                  <label class="checkbox">
+                    <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                  </label>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="reset()">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--Login Modal ends-->
+
+
+      <!--Register Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+          <!--Registration Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Registration Form</h4>
+            </div>
+            <div class="modal-body">
+              <div id="regDiv" class="alert alert-danger" role="alert" style="margin-top:10px;padding: 7px; display:none;">
+                <button type="button" class="close" ng-click="registerErrorMsg=''" aria-label="Close" style="margin-top: -3px;right:0;"><span aria-hidden="true">&times;</span></button>
+                {{registerErrorMsg}}
+              </div>
+              <div class="form-bottom">
+                <form class="form-signin" ng-submit="register()">
+                  <h2 class="form-signin-heading">Please Register</h2>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-first-name">First name</label>
+                    <input type="text" name="form-first-name" placeholder="First name..." ng-model="user1.firstName" class="form-first-name form-control" id="form-first-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-last-name">Last name</label>
+                    <input type="text" name="form-last-name" placeholder="Last name..." ng-model="user1.lastName" class="form-last-name form-control" id="form-last-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-email">Email</label>
+                    <input type="text" name="form-email" placeholder="Email..." ng-model="user1.email" class="form-email form-control" id="form-email" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-password">Password</label>
+                    <input type="password" name="form-password" placeholder="Password..." ng-model="user1.password" class="form-email form-control" id="form-password" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-password">Confirm Password</label>
+                    <input type="password" name="form-password" placeholder="Confirm Password..." ng-model="user1.confirmpassword" class="form-email form-control" id="form-password" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="form-option">Role</label>
+                    <select name="form-option" placeholder="Choose" ng-model="user1.role" class="form-option form-control" id="form-option" required>
+                      <option>Patient</option>
+                      <option>Doctor</option>
+                      <option>Pharmacist</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="apn" class=" " >Age</label>
+                      <input type="text" class="form-control"  placeholder="Age" ng-model="user1.age">
+                  </div>
+                  <div class="form-group">
+                    <label for="apn" class=" " >BloodGroup</label>
+                      <input type="text" class="form-control"  placeholder="bloodGroup" ng-model="user1.bloodGroup">
+                  </div>
+                  <div class="form-group">
+                    <label for="apn" class="control-label col-xs-3 " >Sex</label>
+                      <select  ng-model="user1.sex" class=" form-control" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="apn" class="control-label col-xs-3 " >Contact</label>
+                      <input type="phone" class="form-control" ng-model="user1.contact">
+                  </div>
+                  <div class="form-group">
+                    <label for="apn" class="control-label col-xs-3 " >Address</label>
+                      <textarea type="text" class="form-control"  placeholder="" ng-model="user1.address"></textarea>
+                  </div>
+                  <div id="passDiv" class="alert alert-danger" role="alert" style="margin-top:10px;padding: 7px; display:none;">
+                    <button type="button" class="close" ng-click="passwordError=''" aria-label="Close" style="margin-top: -3px;right:0;"><span aria-hidden="true">&times;</span></button>
+                    {{passwordError}}
+                  </div>
+                  <button type="submit" class="btn" >Sign me up!</button>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Registration Modal ends-->
+
+    </body>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src='login/routeProvider.js'></script>
+    <script src="/login/authController.js"></script>
+
+    </html>
